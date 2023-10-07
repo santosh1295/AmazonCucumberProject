@@ -27,7 +27,6 @@ public class ACAccountPage {
 	public boolean displayAccountName() {
 		
 		return elementUtils.displayStatusOfElement(accountName,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
-		
 	}
 
 }

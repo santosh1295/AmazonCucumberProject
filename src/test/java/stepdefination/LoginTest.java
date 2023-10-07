@@ -29,40 +29,39 @@ public class LoginTest {
 	
 	@When("User enters valid email address {string} into email field")
 	public void user_enters_valid_email_address_into_email_field(String validemailText) {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 	    loginPage.enterEmailAddress(validemailText);
 	}
 	
 	@When("User enters valid password {string} into password field")
 	public void user_enters_valid_password_into_password_field(String validpwd) {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 	    loginPage.enterPassword(validpwd);
 	}
 
 	@When("click on continue button")
 	public void click_on_continue_button() {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 	    loginPage.clickContinueButton();
 	}
 
 	@When("click on sign in button")
 	public void click_on_sign_in_button() {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 	    loginPage.clicksignInSubmit();
 	}
 
 	@Then("User should get successfully logged in")
 	public void user_should_get_successfully_logged_in() {
-		ACAccountPage accountPage=new ACAccountPage(driver);
+		
 		Assert.assertTrue(accountPage.displayAccountName());
 	    
 	}
 
 	@When("User enters Invalid email address {string} into email field")
 	public void user_enters_invalid_email_address_into_email_field(String InvalidemailText) {
-		CommonUtils commonUtils = new CommonUtils();
-		ACLoginPage loginPage=new ACLoginPage(driver);
-		loginPage.enterEmailAddress(commonUtils.getEmailWithTimeStamp());
+		
+		loginPage.enterEmailAddress(InvalidemailText);
 	
 	}
 
@@ -74,7 +73,7 @@ public class LoginTest {
 
 	@When("User enters Invalid password {string} into password field")
 	public void user_enters_invalid_password_into_password_field(String invalidPassword) {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 		loginPage.enterPassword(invalidPassword);
 	}
 	@Then("User should get warning message about password mismatch")
@@ -85,7 +84,7 @@ public class LoginTest {
 
 	@When("User dont enter email address into email field")
 	public void user_dont_enter_email_address_into_email_field() {
-		ACLoginPage loginPage=new ACLoginPage(driver);
+		
 		loginPage.enterEmailAddress("");
 	}
 	@Then("User should get warning message about credentials")
