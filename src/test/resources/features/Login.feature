@@ -10,7 +10,7 @@ Feature: Amazon Login Functionality
 
   Scenario: Login with Invalid email address
     Given User navigate to login page
-    When User enters Invalid email address "chougulesantosh95123@gmail.com" into email field
+    When User enters Invalid email address "chougulesantosh951213@gmail.com" into email field
     And click on continue button
     Then User should get warning message about credentials mismatch
 

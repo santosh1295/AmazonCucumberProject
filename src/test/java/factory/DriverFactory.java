@@ -35,7 +35,7 @@ public class DriverFactory {
 			
 		}
 		
-		driver.manage().deleteAllCookies();
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(CommonUtils.PAGE_LOAD_TIME));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(CommonUtils.IMPLICIT_WAIT_TIME));
